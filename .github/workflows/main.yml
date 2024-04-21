@@ -32,11 +32,11 @@ jobs:
         run: npm run build:prod
       # Route file renaming
       - name: Rename index for routing
-        run: mv dist/ners-web/index.html dist/ners-web/404.html
+        run: mv dist/nerds-web/index.html dist/nerds-web/404.html
       # Deploy to Github pages
       - name: Deploy to Pages
         uses: crazy-max/ghaction-github-pages@v4.0.0
         with:
-          build_dir: dist/ners-web
+          build_dir: dist/nerds-web
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
