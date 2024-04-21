@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "build": "ng build --aot --vendor-chunk --common-chunk --delete-output-path --build-optimizer --configuration production",
+    "build:prod": "ng build --aot --vendor-chunk --common-chunk --delete-output-path --build-optimizer --configuration production --base-href /nerds-web/",
+    "watch": "ng build --watch",
     "test": "ng test"
   },
   "private": true,
